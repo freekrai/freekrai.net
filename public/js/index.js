@@ -23,7 +23,7 @@ $(function() {
             selected--;
             move.play();
             select(selected);
-        } else if (e.keyCode == 40 && selected !== 2) {
+        } else if (e.keyCode == 40 && selected !== 3) {
             selected++;
             move.play();
             select(selected);
