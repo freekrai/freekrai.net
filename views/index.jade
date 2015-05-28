@@ -5,9 +5,27 @@ block styles
 
 block content
 	#index
-		h1.
-			Jaded
-		p.
-			Jaded is a Bare bones jade-based web site, meant for quick websites.
+		h1 Roger Stringer
+		h4 DevOps Engineer, Software Developer, Author and Speaker
+		table
+			tr
+				td
+					img(src='/images/hand.gif')
+				td
+					span Featured Post: 
+					a(href='/changing-things-up') Changing Things Up
+			tr
+				td
+					img.hidden(src='/images/hand.gif')
+				td
+					a(href='/archive') Archive
+
+			tr
+				td
+					img.hidden(src='/images/hand.gif')
+				td
+					a(href='/about') About
+
 block scripts
+	script(src='/js/buzz.min.js')
 	script(src='/js/index.js')

@@ -1,167 +1,144 @@
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+@import 'normalize.less';
+
+* { box-sizing: border-box;}
+
+html, body {
+  height:100%;
+  width:100%;
+  font-family:'Consolas', monospace;
+  background: url(/images/zelda-overworld.png) no-repeat top center;
+  background-size: cover;
+  overflow:scroll;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 15px;
-  padding-left: 15px;
+h1, h2, h3 {
+  font-family:'Press Start 2P', 'Trebuchet MS', Helvetica, sans-serif;
 }
 
-/* Custom page header */
-.header {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
+a, a:visited {
+  color:cyan;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+p {
+  line-height:1.4em;
 }
 
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
+#onecol {
+  margin:10px auto;
+  max-width:800px;
+  padding:10px;
+  background-color:#000;
+  color:#fff;
+
+  h1, h2, h3, p {
+    line-height:1.4em;
+    margin:0 0 10px 0;
   }
-}
-.container-narrow > hr {
-  margin: 30px 0;
-}
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
+  th, td {
+    vertical-align: top;
+    padding:10px 5px;
+    h2 {
+      margin:0;
+    }
   }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+
+  th {
+    text-align:right;
+    color:yellow;
+    padding-right:10px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+
+  #avatar {
+    float:right;
+    clear:both;
+    margin:0 0 10px 10px;
+    text-align: center;
+
+    a {
+      display:block;
+      margin:10px;
+    }
   }
 }
 
-#popular {
-    float: left;
-    clear: both;
-    margin: 0 0 30px;
-    background: #fff;
-    width: 80%;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    border: solid 1px #ddd;
-    font-size: 81%;
-    width: 96%;
-    max-width: 817px;
+#main {
+  margin-right:256px;
+  @media only screen and (max-width : 768px) {
+    margin-right:0;
+  }
+
+  #container {
+    margin:0 auto;
+    max-width:760px;
+    padding:10px;
+  }
+
+  #markdown {
+    padding:10px;
+    background-color:#eee;
+    color:#444;
+    box-sizing: border-box;
+
+    @import 'markdown.less';
+  }
 }
-#popular header {
-    background: #f3f3f3;
-    border-bottom: 1px solid #ddd;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    padding: 6px 0px 0px 10px;
-    cursor: s-resize;
+
+#sidebar {
+  margin:0 10px;
+  background-color: #000;
+  height:256px;
+
+  @media only screen and (min-width : 768px) {
+    position:absolute;
+    top:0;
+    right:0;
+    width:256px;
+    height:100%;
+    margin:0;
+
+    h1 {
+      line-height:1.4em;
+    }
+  }
+
+  #inventory {
+    position:relative;
+    margin:0 auto;
+    width:256px;
+    height:224px;
+    background: url(/images/inventory.gif) no-repeat; 
+
+    a, a:visited {
+      font-size:12px;
+    }
+
+    #title {
+      position:absolute;
+      top:23px;
+      left:15px;
+      color:red;
+
+      a, a:visited {
+        font-family: 'Press Start 2P', 'Consolas', monospace;
+        color:red;
+        text-decoration:none;
+      }
+    }
+
+    #links {
+      position:absolute;
+      top:100px;
+      left:15px;
+
+      a {
+        display:block;
+        margin-bottom:5px;
+      }
+    }
+  }
 }
-#popular header h1 {
-    font-size: 1em;
-    color: #666;
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-    padding-bottom: 6px;
-    margin: 0;
-}
-#popular header.loading span {
-    -webkit-animation-name: pulse;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: 100;
-    color: #bbb;
-}
-#popular header.loaded {
-    -moz-border-radius-bottomleft: 0;
-    -webkit-border-bottom-left-radius: 0;
-    border-bottom-left-radius: 0;
-    -moz-border-radius-bottomright: 0;
-    -webkit-border-bottom-right-radius: 0;
-    border-bottom-right-radius: 0;
-    cursor: default;
-}
-#popular ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px;
-    color: #007892;
-}
-#popular ul li {
-    float: left;
-    width: 49%;
-  margin: 0.25em 0;
-}
-#popular ul li a {
-    display: block;
-    margin: 0;
-    padding: 2px;
-    width: 91%;
-  color: #0689a6; 
-    height: 1.5em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: .85em;
-}
-/*
-#popular ul li a {
-    display: block;
-    margin: 0;
-    padding: 2px;
-    width: 91%;
-  color: #0689a6; 
-    height: 1.5em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 15px;
-} 
-*/
-@media only screen and (max-width: 790px) {
-    #popular ul li {
-    float: none;
-    width: 100%}
+
+.hidden {
+  visibility:hidden;
 }

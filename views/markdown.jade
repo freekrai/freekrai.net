@@ -1,15 +1,15 @@
 extends layout
 
 block content
-	section.row
-		div.col-sm-8
+	section#main
+		#container
 			#markdown!= pageContent
-		div.col-sm-3.col-sm-offset-1.well
+
+	section#sidebar
+		#inventory
 			span#title 
-				a(href='/') Jaded
+				a(href='/') Freekrai.net
 			nav#links
-				ul.list-unstyled
-					li
-						a(href='/about') About
-					li
-						a(href='/hello') Hello
+				a(href='/archive') Archive
+				a(href='/about') About
+				a(href='http://rogerstringer.com') Read My Blog

@@ -21,13 +21,13 @@ app.use(express.static(publicDir));
 // Handle named pages
 app.get('/', function(request, response) {
 	response.render('index', {
-		title: 'Jaded'
+		title: 'Roger Stringer'
 	});
 });
 
 app.get('/about', function(request, response) {
 	response.render('about', {
-		title: 'About Jaded'
+		title: 'About Roger Stringer'
 	});
 });
 
