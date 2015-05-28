@@ -2,11 +2,9 @@
 
 A collection of various writings and projects from across the Interweb that I've worked on.
 
-## Writing
+### Writing on this site
 
-<ul class="posts">
-	<li><a href="/changing-things-up">Changing Some Things Up</a></li>
-</ul>
+# [Changing Some Things Up](/changing-things-up)
 
 <hr/>
 
