@@ -2,9 +2,9 @@
 
 A collection of various writings and projects from across the Interweb that I've worked on.
 
-### Writing on this site
+#### Writing on this site
 
-# [Changing Some Things Up](/changing-things-up)
+* [Changing Some Things Up](/changing-things-up)
 
 <hr/>
 
