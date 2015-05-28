@@ -2,7 +2,7 @@
 
 A collection of various writings and projects from across the Interweb that I've worked on.
 
-# Writing
+## Writing
 
 <ul class="posts">
 	<li><a href="/changing-things-up">Changing Some Things Up</a></li>
@@ -21,7 +21,7 @@ A collection of various writings and projects from across the Interweb that I've
 
 <hr/>
 
-### Highlighted Posts From The <a href="http://blog.datamcfly.com">Data McFly Blog</a>
+#### Highlighted Posts From The <a href="http://blog.datamcfly.com">Data McFly Blog</a>
 
 * [Build a real-time SMS call center with Data McFly and Twilio](http://blog.datamcfly.com/2015/01/29/sms-contact-twilio)
 * [Build a real-time SMS group chat tool with Data McFly, Twilio and Node.js](http://blog.datamcfly.com/2015/03/31/group-chat-twilio)
@@ -32,7 +32,7 @@ A collection of various writings and projects from across the Interweb that I've
 
 <hr/>
 
-### Links &amp; Projects
+#### Various Links &amp; Projects
 
 * [Data McFly:](https://datamcfly.com) A real-time backend API service.
 * [Roger Stringer dot com:](http://rogerstringer.com/) My personal blog.
