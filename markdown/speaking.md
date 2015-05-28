@@ -2,9 +2,7 @@
 
 I’m available for speaking gigs; just [contact me](http://rogerstringer.com/contact/ "Contact Me"). I’m open to talk about anything Internet-related, but I have the most fun talking about back-end development, PHP, Node.js, real-time, Twilio, WordPress, APIs, Remote work, being a startup founder and Agile project management.
 
-<hr />
-
-## Upcoming Engagements
+### Upcoming Engagements
 
 #### [Future Insights Live](https://futureinsightslive.com/las-vegas-2015/), June 2015, Las Vegas, NV, USA
 
