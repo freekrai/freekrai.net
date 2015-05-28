@@ -22,8 +22,6 @@ I’ll also be hosting a talk on day two called **Building Your Own Real-time AP
 > 
 > In this talk, developers will get introduced to using LevelDB, Node.JS and Socket.io to build a real-time REST API that can be integrated into any any client-side app quickly. Once built, developers can use this API for apps of all sizes and platforms without any extra work.
 
-<hr />
-
 <div style="text-align:center;">
 	<a href="http://rogerstringer.com/contact/" class="button">Book me as a speaker for your next conference or event</a>
 </div>
