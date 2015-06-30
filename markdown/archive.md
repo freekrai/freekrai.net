@@ -4,6 +4,7 @@ A collection of various writings and projects from across the Interweb that I've
 
 #### Writing on this site
 
+* [A Rebranding](/a-rebranding)
 * [Changing Some Things Up](/changing-things-up)
 
 <hr/>
@@ -19,20 +20,21 @@ A collection of various writings and projects from across the Interweb that I've
 
 <hr/>
 
-#### Highlighted Posts From The <a href="http://blog.datamcfly.com">Data McFly Blog</a>
+#### Highlighted Posts From The <a href="http://blog.flybase.io">Flybase Blog</a>
 
-* [Build a real-time SMS call center with Data McFly and Twilio](http://blog.datamcfly.com/2015/01/29/sms-contact-twilio)
-* [Build a real-time SMS group chat tool with Data McFly, Twilio and Node.js](http://blog.datamcfly.com/2015/03/31/group-chat-twilio)
-* [Improving Angular.js web app performance](http://blog.datamcfly.com/2015/03/02/improving-angular-web-app-performance-example)
-* [Ultimate guide to learning AngularJS in one day](http://blog.datamcfly.com/2015/02/20/ultimate-guide-to-learning-angular-js-in-one-day)
-* [Coding in the cloud: a week with a chromebook](http://blog.datamcfly.com/2014/11/10/coding-in-the-cloud)
-* [Build a Simple Time Tracker with Data McFly and Angular.js](http://blog.datamcfly.com/2015/05/01/angular-mcfly-time-tracker)
+* [Build a real-time SMS call center with Flybase and Twilio](http://blog.flybase.io/2015/01/29/sms-contact-twilio)
+* [Build a real-time SMS group chat tool with Flybase, Twilio and Node.js](http://blog.flybase.io/2015/03/31/group-chat-twilio)
+* [Improving Angular.js web app performance](http://blog.flybase.io/2015/03/02/improving-angular-web-app-performance-example)
+* [Ultimate guide to learning AngularJS in one day](http://blog.flybase.io/2015/02/20/ultimate-guide-to-learning-angular-js-in-one-day)
+* [Coding in the cloud: a week with a chromebook](http://blog.flybase.io/2014/11/10/coding-in-the-cloud)
+* [Build a Simple Time Tracker with Flybase and Angular.js](http://blog.flybase.io/2015/05/01/angular-mcfly-time-tracker)
 
 <hr/>
 
 #### Various Links &amp; Projects
 
-* [Data McFly:](https://datamcfly.com) A real-time backend API service.
+* [Flybase:](https://flybase.io) A real-time backend API service.
+* [MVPin30:](http://mvpin30) blog where we build a new rapid MVP every 30 days or less.
 * [Roger Stringer dot com:](http://rogerstringer.com/) My personal blog.
 * [Schemaless:](https://github.com/freekrai/Schemaless) Schemaless database built on top of SqLite, based on MongoDB, written in PHP.
 * [NotRedis:](https://github.com/freekrai/NotRedis) A simple storage class inspired by the redis api on top of Sqlite, written in PHP.
