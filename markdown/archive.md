@@ -22,6 +22,8 @@ A collection of various writings and projects from across the Interweb that I've
 
 #### Highlighted Posts From The <a href="http://blog.flybase.io">Flybase Blog</a>
 
+* [SideGig.me - Cloning TaskRabbit with Flybase and Angular.js](http://blog.flybase.io/2015/07/15/sidegig-fit-stack)
+* [Flybase and Ionic](http://blog.flybase.io/2015/07/08/ionic-flybase)
 * [Build a real-time SMS call center with Flybase and Twilio](http://blog.flybase.io/2015/01/29/sms-contact-twilio)
 * [Build a real-time SMS group chat tool with Flybase, Twilio and Node.js](http://blog.flybase.io/2015/03/31/group-chat-twilio)
 * [Improving Angular.js web app performance](http://blog.flybase.io/2015/03/02/improving-angular-web-app-performance-example)
@@ -36,8 +38,10 @@ A collection of various writings and projects from across the Interweb that I've
 * [Flybase:](https://flybase.io) A real-time backend API service.
 * [MVPin30:](http://mvpin30) blog where we build a new rapid MVP every 30 days or less.
 * [Roger Stringer dot com:](http://rogerstringer.com/) My personal blog.
-* [Schemaless:](https://github.com/freekrai/Schemaless) Schemaless database built on top of SqLite, based on MongoDB, written in PHP.
-* [NotRedis:](https://github.com/freekrai/NotRedis) A simple storage class inspired by the redis api on top of Sqlite, written in PHP.
-* [Summarizer:](https://github.com/freekrai/summarizer) PHP class to summarize content into short summary
+* [DevOps with Roger Stringer:](http://devops.freekrai.net/) A personal blog dedicated to DevOps and DevOps related content.
+* [FIT Stack:](https://github.com/flybaseio/fit-stack) A Flybase / Angular.js / Node.js powered framework for rapidly building MVPs.
 * [Jaded:](https://github.com/freekrai/jaded) Node.js jade-based static(ish) site generator
+* [uberDB:](http://freekrai.github.io/uberdb/) A Lightweight Disk based JSON Database with a MongoDB like API for Node
+* [Summarizer:](https://github.com/freekrai/summarizer) PHP class to summarize content into short summary
 * [WorkerPod:](http://workerpod.com/) an online service designed for the sole purpose of helping web professionals find their next job, promote their availability and trade skills with like minded people. We bring together the latest data from leading and niche web job boards, add our own meta data such as key skills and location and notify subscribers.
+* [Jolt Framework:](http://joltframework.com/) Jolt Framework, a micro PHP framework for quickly building apps.
