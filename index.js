@@ -21,7 +21,8 @@ app.use(express.static(publicDir));
 // Handle named pages
 app.get('/', function(request, response) {
 	response.render('index', {
-		title: 'Roger Stringer'
+		title: 'Roger Stringer',
+		latest: getLatestPost()
 	});
 });
 
@@ -31,16 +32,18 @@ app.get('/about', function(request, response) {
 	});
 });
 
+app.get('/archive', function(request, response){
+	response.render('archive', {
+		title: 'Archives',
+		pageContent: getPostInfo('archive').html,
+		posts: getPosts()
+	});	
+});
+
 // catch-all handler for simple markdown posts
 app.get('/:page', function(request, response, next) {
 	var pageRequested = request.params.page;
-	var content = pages[pageRequested] || markdown(request.params.page);
-	if (!content) {
-		return next();
-	} else if (!pages[pageRequested]) {
-		pages[pageRequested] = content;
-	}
-
+	var  content = getPostInfo( pageRequested );
 	response.render('markdown', {
 		title: content.title,
 		pageContent: content.html
@@ -58,3 +61,80 @@ var port = process.env.PORT || 3000;
 server.listen(port, function() {
 	console.log('Express server running on *:'+port);
 });
+
+// Return formatted post info...
+function getPostInfo( post ){
+	var content = pages[post] || markdown(post);
+	if (!content) {
+		return next();
+	} else if (!pages[post]) {
+		pages[post] = content;
+	}
+	content.url = "/"+post;
+	return content;
+}
+
+//	return latest post from markdown folder...
+function getLatestPost(){
+	var pageRequested = getNewestFile("./markdown/", new RegExp('.*\.md'));
+	pageRequested = pageRequested.replace(".md","");
+	var content = getPostInfo( pageRequested );
+	return content;
+}
+
+// return all posts from markdown folder...
+function getPosts(){
+	var posts = getFiles("./markdown/", new RegExp('.*\.md'));
+	for( var i in posts ){
+		var pageRequested = posts[i];
+		pageRequested = pageRequested.replace(".md","");
+		var content = getPostInfo( pageRequested );
+		posts[i] = content;
+	}
+	return posts;
+}
+//	var posts = getPosts();
+
+// used to return the newest file in specified folder...
+function getNewestFile(dir, regexp) {
+	var newest = null;
+	var files = fs.readdirSync(dir);
+	var one_matched = 0;
+	
+	for (i = 0; i < files.length; i++) {
+		if( files[i] !== "archive.md" && files[i] !== "speaking.md" ){
+			if (regexp.test(files[i]) == false){
+				continue
+			}else if (one_matched == 0) {
+				newest = files[i];
+				one_matched = 1;
+				continue;
+			}
+			var file = files[i];
+			f1_time = fs.statSync(dir+file).mtime.getTime();
+			f2_time = fs.statSync(dir+newest).mtime.getTime();
+			if (f1_time > f2_time)	newest = file;
+		}
+	}
+	
+	if (newest != null)	return (newest);
+	return null;
+}
+
+// used to return all files in specified folder...
+function getFiles(dir, regexp) {
+	var posts = [];
+	var files = fs.readdirSync(dir);
+	
+	for (i = 0; i < files.length; i++) {
+		if( files[i] !== "archive.md" && files[i] !== "speaking.md" ){
+			if (regexp.test(files[i]) == false){
+				continue
+			}else{
+				posts.push( files[i] );
+			}
+		}
+	}
+	if (posts != null)	return (posts);
+	return null;
+}

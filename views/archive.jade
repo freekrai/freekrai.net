@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	section#main
+		#container
+			#markdown
+				h1 Archive
+				p A collection of various writings and projects from across the Interweb that I've worked on.
+				h4 Writing on this site
+				ul
+					for post in posts
+						li
+							a( href="#{post.url}") #{post.title}
+				hr
+				div!= pageContent
+	section#sidebar
+		#inventory
+			span#title 
+				a(href='/') ROGER
+			nav#links
+				a(href='/archive') Archive
+				a(href='/about') About
+				a(href='http://rogerstringer.com') Read My Blog

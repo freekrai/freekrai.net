@@ -1,14 +1,3 @@
-# Archive
-
-A collection of various writings and projects from across the Interweb that I've worked on.
-
-#### Writing on this site
-
-* [A Rebranding](/a-rebranding)
-* [Changing Some Things Up](/changing-things-up)
-
-<hr/>
-
 #### Highlighted Posts From <a href="http://rogerstringer.com">Roger Stringer.com</a>
 
 * [Upgrade an ASUS Chromebox - more RAM, bigger SSD, and Ubuntu](http://rogerstringer.com/2014/09/21/upgrade-asus-chromebox-ram-bigger-ssd-ubuntu)
