@@ -43,11 +43,16 @@ app.get('/archive', function(request, response){
 // catch-all handler for simple markdown posts
 app.get('/:page', function(request, response, next) {
 	var pageRequested = request.params.page;
-	var  content = getPostInfo( pageRequested );
-	response.render('markdown', {
-		title: content.title,
-		pageContent: content.html
-	});
+	var template = path.join(__dirname, 'markdown');
+	if( fs.existsSync(template + '/'+pageRequested+'.md') ){
+		var  content = getPostInfo( pageRequested );
+		response.render('markdown', {
+			title: content.title,
+			pageContent: content.html
+		});
+	}else{
+		response.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+	}
 });
 
 // 404
