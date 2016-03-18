@@ -1,5 +1,7 @@
 # Jaded
 
+_ignore_
+
 Quick Jade-based static(ish) website generator.
 
 Cross-between hard coded pages and pages in the `markdown` folder.
