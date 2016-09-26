@@ -2,7 +2,6 @@ var fs = require('fs');
 var http = require('http');
 var path = require('path');
 var express = require('express');
-var _ = require('lodash');
 var less = require('less-middleware');
 var markdown = require('./markdown');
 
@@ -106,9 +105,7 @@ function getNewestFile(dir, regexp) {
 	var newest = null;
 	var files = fs.readdirSync(dir);
 	var one_matched = 0;
-
-	var cfiles = [];
-	var out = [];
+	
 	for (i = 0; i < files.length; i++) {
 		if( files[i] !== "archive.md" && files[i] !== "speaking.md" ){
 			if (regexp.test(files[i]) == false){
@@ -119,16 +116,14 @@ function getNewestFile(dir, regexp) {
 				continue;
 			}
 			var file = files[i];
-			var filen = path.join(dir, file);
-            out.push({ "file":filen, "mtime": fs.statSync( filen ).mtime.getTime() });
+			f1_time = fs.statSync(dir+file).ctime.getTime();
+			f2_time = fs.statSync(dir+newest).ctime.getTime();
+			if (f1_time > f2_time)	newest = file;
 		}
 	}
 	
-	out.sort(function(a,b) {
-		return b.mtime - a.mtime;
-	});
-	
-    return (out.length>0) ? out[0].file : null;
+	if (newest != null)	return (newest);
+	return null;
 }
 
 // used to return all files in specified folder...
