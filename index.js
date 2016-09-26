@@ -122,8 +122,8 @@ function getNewestFile(dir, regexp) {
 			f2_time = fs.statSync(dir+newest).ctime.getTime();
 			filelist.push({
 				file: file,
-				ctime = fs.statSync(dir+file).ctime.getTime(),
-				mtime = fs.statSync(dir+file).mtime.getTime()
+				ctime: fs.statSync(dir+file).ctime.getTime(),
+				mtime: fs.statSync(dir+file).mtime.getTime()
 			});
 			if (f1_time > f2_time)	newest = file;
 		}
