@@ -106,6 +106,8 @@ function getNewestFile(dir, regexp) {
 	var files = fs.readdirSync(dir);
 	var one_matched = 0;
 	
+	var filelist = [];
+	
 	for (i = 0; i < files.length; i++) {
 		if( files[i] !== "archive.md" && files[i] !== "speaking.md" ){
 			if (regexp.test(files[i]) == false){
@@ -118,9 +120,22 @@ function getNewestFile(dir, regexp) {
 			var file = files[i];
 			f1_time = fs.statSync(dir+file).ctime.getTime();
 			f2_time = fs.statSync(dir+newest).ctime.getTime();
+			filelist[] = {
+				file: file,
+				ctime = fs.statSync(dir+file).ctime.getTime(),
+				mtime = fs.statSync(dir+file).mtime.getTime()
+			};
 			if (f1_time > f2_time)	newest = file;
 		}
 	}
+	
+	filelist.sort( function(a,b){
+		return b.mtime - a.mtime;
+	});
+	
+	if( filelist.length > 0 ){
+		var newest = filelist[0].file;
+	}	
 	
 	if (newest != null)	return (newest);
 	return null;
