@@ -108,14 +108,14 @@ function getNewestFile(dir, regexp) {
 	
 	var filelist = [];
 	
-	for (i = 0; i < files.length; i++) {
+	for (i = 0; i <= files.length; i++) {
 		if( files[i] !== "archive.md" && files[i] !== "speaking.md" ){
 			if (regexp.test(files[i]) == false){
 				continue
 			}else if (one_matched == 0) {
 				newest = files[i];
 				one_matched = 1;
-				continue;
+//				continue;
 			}
 			var file = files[i];
 			f1_time = fs.statSync(dir+file).ctime.getTime();
@@ -128,9 +128,8 @@ function getNewestFile(dir, regexp) {
 			if (f1_time > f2_time)	newest = file;
 		}
 	}
-	
 	filelist.sort( function(a,b){
-		return a - b;
+		return b.mtime > a.mtime;
 	});
 	
 	if( filelist.length > 0 ){
@@ -145,16 +144,33 @@ function getNewestFile(dir, regexp) {
 function getFiles(dir, regexp) {
 	var posts = [];
 	var files = fs.readdirSync(dir);
+	var filelist = [];
 	
 	for (i = 0; i < files.length; i++) {
 		if( files[i] !== "archive.md" && files[i] !== "speaking.md" ){
 			if (regexp.test(files[i]) == false){
 				continue
 			}else{
-				posts.push( files[i] );
+				var file = files[i];
+				filelist.push({
+					file: file,
+					ctime: fs.statSync(dir+file).ctime.getTime(),
+					mtime: fs.statSync(dir+file).mtime.getTime()
+				});
 			}
 		}
 	}
+
+	filelist.sort( function(a,b){
+		return b.mtime > a.mtime;
+	});
+	
+	if( filelist.length > 0 ){
+		for (i = 0; i < filelist.length; i++) {
+			posts.push( filelist[i].file );
+		}
+	}
+	
 	if (posts != null)	return (posts);
 	return null;
 }
