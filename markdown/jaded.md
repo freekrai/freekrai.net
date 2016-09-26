@@ -1,6 +1,6 @@
 # Jaded
 
-This site is powered by [Jaded:](https://github.com/freekrai/jaded), my static(ish) site generator.
+This site is powered by [Jaded](https://github.com/freekrai/jaded), my static(ish) site generator.
 
 I'm actually working on a new version of Jaded, that will allow you to generate static files rather than the current in-memory process that's used.
 

@@ -2,6 +2,7 @@ var fs = require('fs');
 var http = require('http');
 var path = require('path');
 var express = require('express');
+var _ = require('lodash');
 var less = require('less-middleware');
 var markdown = require('./markdown');
 
@@ -105,7 +106,12 @@ function getNewestFile(dir, regexp) {
 	var newest = null;
 	var files = fs.readdirSync(dir);
 	var one_matched = 0;
-	
+
+	return _.max(files, function (f) {
+		var fullpath = path.join(dir, f);
+		return fs.statSync(fullpath).ctime;
+	});
+/*	
 	for (i = 0; i < files.length; i++) {
 		if( files[i] !== "archive.md" && files[i] !== "speaking.md" ){
 			if (regexp.test(files[i]) == false){
@@ -121,9 +127,9 @@ function getNewestFile(dir, regexp) {
 			if (f1_time > f2_time)	newest = file;
 		}
 	}
-	
 	if (newest != null)	return (newest);
 	return null;
+*/	
 }
 
 // used to return all files in specified folder...
