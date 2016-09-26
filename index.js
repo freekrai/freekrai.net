@@ -130,7 +130,7 @@ function getNewestFile(dir, regexp) {
 	}
 	
 	filelist.sort( function(a,b){
-		return b.mtime - a.mtime;
+		return a - b;
 	});
 	
 	if( filelist.length > 0 ){
