@@ -21,5 +21,3 @@ The name Data McFly isn't going away entirely though, Data McFly is still the of
 In some ways, this gives us more freedom to continue to bring the great service you've come to expect, and also to add new services, so that's a win for everyone.
 
 The first new service is a new blog, called [MVPin30](http://mvpin30.com), where we show you how to build a new Flybase powered MVP every 30 days or less, as well as other tips and tricks related to building MVPs.
-
-The first MVP built under the MVPin30 label is [UberTok](http://ubertok.com), a simple video chat tool for small teams to conference with.

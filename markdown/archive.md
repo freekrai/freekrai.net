@@ -1,24 +1,23 @@
 #### Highlighted Posts From <a href="http://rogerstringer.com">Roger Stringer.com</a>
 
 * [Upgrade an ASUS Chromebox - more RAM, bigger SSD, and Ubuntu](http://rogerstringer.com/2014/09/21/upgrade-asus-chromebox-ram-bigger-ssd-ubuntu)
-* [Generate UUIDs in PHP](http://rogerstringer.com/2013/11/15/generate-uuids-php)
-* [Useful Pythonista Links](http://rogerstringer.com/2012/12/03/useful-pythonista-links)
-* [Using Dropbox as a Git repository](http://rogerstringer.com/2012/04/16/using-dropbox-as-a-git-repository)
-* [What can I do with a Raspberry Pi?](http://rogerstringer.com/2013/01/13/what-can-i-do-with-a-raspberry-pi)
-* [How to rewrite urls with PHP 5.4's built-in web server](http://rogerstringer.com/2014/08/13/rewrite-urls-php-5-4s-built-web-server)
+* [Apple Explains Why It Eliminated the Headphone Jack](/2016/09/08/apple-explains-why-it-eliminated-the-headphone-jack/ "Apple Explains Why It Eliminated the Headphone Jack")
+* [Jim Dalrymple on the Apple Watch 2](/2016/09/14/jim-dalrymple-on-the-apple-watch-2/ "Jim Dalrymple on the Apple Watch 2")
+* [Generate UUIDs in PHP](/2013/11/15/generate-uuids-php/ "Generate UUIDs in PHP")
+* [Upgrade an ASUS Chromebox - more RAM, bigger SSD, and Ubuntu](/2014/09/21/upgrade-asus-chromebox-ram-bigger-ssd-ubuntu/ "Upgrade an ASUS Chromebox - more RAM, bigger SSD, and Ubuntu")
+* [Getting Started with Parse Server, Heroku and MongoLabs](/2016/02/04/parse-server-heroku/ "Getting Started with Parse Server, Heroku and MongoLabs")
+* [Make Your Own Heroku with Dokku and DigitalOcean](/2015/05/13/make-your-own-heroku/ "Make Your Own Heroku with Dokku and DigitalOcean")
 
 <hr/>
 
 #### Highlighted Posts From The <a href="http://blog.flybase.io">Flybase Blog</a>
 
-* [SideGig.me - Cloning TaskRabbit with Flybase and Angular.js](http://blog.flybase.io/2015/07/15/sidegig-fit-stack)
-* [Flybase and Ionic](http://blog.flybase.io/2015/07/08/ionic-flybase)
-* [Build a real-time SMS call center with Flybase and Twilio](http://blog.flybase.io/2015/01/29/sms-contact-twilio)
-* [Build a real-time SMS group chat tool with Flybase, Twilio and Node.js](http://blog.flybase.io/2015/03/31/group-chat-twilio)
-* [Improving Angular.js web app performance](http://blog.flybase.io/2015/03/02/improving-angular-web-app-performance-example)
-* [Ultimate guide to learning AngularJS in one day](http://blog.flybase.io/2015/02/20/ultimate-guide-to-learning-angular-js-in-one-day)
-* [Coding in the cloud: a week with a chromebook](http://blog.flybase.io/2014/11/10/coding-in-the-cloud)
-* [Build a Simple Time Tracker with Flybase and Angular.js](http://blog.flybase.io/2015/05/01/angular-mcfly-time-tracker)
+* [Build a real-time SMS group chat tool with Data McFly, Twilio and Node.js](/2015/03/31/group-chat-twilio/ "Build a real-time SMS group chat tool with Data McFly, Twilio and Node.js")
+* [Client-side Facebook login with Flybase and Hello.js](/2015/08/12/client-side-login-flybase-hellojs/ "Client-side Facebook login with Flybase and Hello.js")
+* [Creating a Click to Call Call Center with Flybase, Twilio Client and Node.js](/2015/08/22/creating-a-click-to-call-service-with-twilio-client-flybase-and-node/ "Creating a Click to Call Call Center with Flybase, Twilio Client and Node.js")
+* [Real-time Call Tracking Dashboard with Flybase and Twilio](/2016/09/09/call-tracking-dashboard/ "Real-time Call Tracking Dashboard with Flybase and Twilio")
+* [So Parse is closing, what does that mean?](/2016/02/02/parse-closing/ "So Parse is closing, what does that mean?")
+* [Building a Suggestion Box app](/2016/06/09/building-a-suggestion-box/ "Building a Suggestion Box app")
 
 <hr/>
 
