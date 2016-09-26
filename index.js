@@ -107,11 +107,8 @@ function getNewestFile(dir, regexp) {
 	var files = fs.readdirSync(dir);
 	var one_matched = 0;
 
-	return _.max(files, function (f) {
-		var fullpath = path.join(dir, f);
-		return fs.statSync(fullpath).ctime;
-	});
-/*	
+	var cfiles = [];
+	var out = [];
 	for (i = 0; i < files.length; i++) {
 		if( files[i] !== "archive.md" && files[i] !== "speaking.md" ){
 			if (regexp.test(files[i]) == false){
@@ -122,14 +119,16 @@ function getNewestFile(dir, regexp) {
 				continue;
 			}
 			var file = files[i];
-			f1_time = fs.statSync(dir+file).mtime.getTime();
-			f2_time = fs.statSync(dir+newest).mtime.getTime();
-			if (f1_time > f2_time)	newest = file;
+			var filen = path.join(dir, file);
+            out.push({ "file":filen, "mtime": fs.statSync( filen ).mtime.getTime() });
 		}
 	}
-	if (newest != null)	return (newest);
-	return null;
-*/	
+	
+	out.sort(function(a,b) {
+		return b.mtime - a.mtime;
+	});
+	
+    return (out.length>0) ? out[0].file : null;
 }
 
 // used to return all files in specified folder...
