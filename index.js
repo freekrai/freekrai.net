@@ -120,11 +120,11 @@ function getNewestFile(dir, regexp) {
 			var file = files[i];
 			f1_time = fs.statSync(dir+file).ctime.getTime();
 			f2_time = fs.statSync(dir+newest).ctime.getTime();
-			filelist[] = {
+			filelist.push({
 				file: file,
 				ctime = fs.statSync(dir+file).ctime.getTime(),
 				mtime = fs.statSync(dir+file).mtime.getTime()
-			};
+			});
 			if (f1_time > f2_time)	newest = file;
 		}
 	}
